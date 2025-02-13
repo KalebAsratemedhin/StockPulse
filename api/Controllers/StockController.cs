@@ -1,13 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using api.Data;
 using api.Dtos.Stock;
 using api.Interfaces;
 using api.Mappers;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace api.Controllers
 {
@@ -15,12 +10,10 @@ namespace api.Controllers
     [ApiController]
     public class StockController: ControllerBase
     {
-        private readonly ApplicationDBContext _context;
         private readonly IStockRepository  _stockRepo;
 
-        public StockController(ApplicationDBContext context, IStockRepository stockRepository)
+        public StockController(IStockRepository stockRepository)
         {
-            _context = context;
             _stockRepo = stockRepository;
         }
 
