@@ -56,7 +56,8 @@ namespace api.Controllers
 
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete]
+        [Route("{id}")]
 
         public async Task<IActionResult> Delete([FromRoute] int id)
         {

@@ -1,0 +1,3 @@
+./api/appsettings.Development.json
+**/appsettings.Development.json
+.vscode/
